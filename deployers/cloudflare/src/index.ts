@@ -159,10 +159,13 @@ export class CloudflareDeployer extends Deployer {
 
 
       // Configure export
+        // Configure export
+      if (telemetry.export) {
         telemetryConfig.exporter = {
           url: telemetry.export.endpoint,
           headers: telemetry.export.headers || {},
         };
+      }
 
       return telemetryConfig;
     };
