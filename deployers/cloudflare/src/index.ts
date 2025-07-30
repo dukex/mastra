@@ -172,7 +172,6 @@ export class CloudflareDeployer extends Deployer {
 
     export default telemetry.enabled !== false ? instrument({
       fetch: handler,
-      config,
     }, config) : {
       fetch: handler,
     };
