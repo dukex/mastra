@@ -299,9 +299,9 @@ export interface GetMemoryConfigParams {
 export type GetMemoryConfigResponse = { config: MemoryConfig };
 
 export interface UpdateMemoryThreadParams {
-  title: string;
-  metadata: Record<string, any>;
-  resourceId: string;
+  title?: string;
+  metadata?: Record<string, any>;
+  resourceId?: string;
   requestContext?: RequestContext | Record<string, any>;
 }
 
